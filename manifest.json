@@ -1,0 +1,24 @@
+{
+  "name": "Decode QR Image",
+  "short_name": "qrdecode",
+  "description": "Decoe QR Image, and copy the result to clipboard.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "scripts": [
+      "scripts/qrcode-reader.js",
+      "scripts/event.js"
+    ],
+    "persisted": false
+  },
+  "permissions": [
+    "contextMenus",
+    "notifications",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
